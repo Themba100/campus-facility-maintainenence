@@ -8,6 +8,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
@@ -18,8 +19,15 @@ class RegisteredUserController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create()
+    public function create(Request $request)
     {
+      // $data = DB::table('users')->insert([
+      //     'reg_number' => $request->reg_number,
+      //     'contact' => $request->contact_no,
+      //     'gender' => $request->gender,
+      //     'program_of_study' =>$request->program_of_study
+      // ]);
+
         return view('auth.register');
     }
 
@@ -39,11 +47,28 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $path = 'users/images/';
+        $fontPath =public_path('fonts/Oliciy.ttf');
+        $char = strtoupper($request->name[0]);
+        $newAvatarName = rand(12,34353).time().'_avatar.png';
+        $dest =$path.$newAvatarName;
+
+        $createAvatar = makeAvatar($fontPath, $dest, $char);
+        $picture = $createAvatar ==  true ? $newAvatarName : '';
+
+        $user = new User();
+        $user->name = $request->name;
+        $user->email= $request->email;
+        $user->role = Auth::user()->role;
+        $user->password = \Hash::make($request->password);
+        $user->avatar = $picture;
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
         $user->attachRole($request->role_id);
         event(new Registered($user));
 

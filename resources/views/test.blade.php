@@ -1100,3 +1100,500 @@
             </a>
         </div>
     </div>
+{{-- tables --}}
+<!-- component -->
+<link
+	href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+	rel="stylesheet">
+<div class="flex items-center justify-center min-h-screen bg-gray-900">
+	<div class="col-span-12">
+		<div class="overflow-auto lg:overflow-visible ">
+			<table class="table text-gray-400 border-separate space-y-6 text-sm">
+				<thead class="bg-gray-800 text-gray-500">
+					<tr>
+						<th class="p-3">Brand</th>
+						<th class="p-3 text-left">Category</th>
+						<th class="p-3 text-left">Price</th>
+						<th class="p-3 text-left">Status</th>
+						<th class="p-3 text-left">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="bg-gray-800">
+						<td class="p-3">
+							<div class="flex align-items-center">
+								<img class="rounded-full h-12 w-12  object-cover" src="https://images.unsplash.com/photo-1613588718956-c2e80305bf61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="unsplash image">
+								<div class="ml-3">
+									<div class="">Appple</div>
+									<div class="text-gray-500">mail@rgmail.com</div>
+								</div>
+							</div>
+						</td>
+						<td class="p-3">
+							Technology
+						</td>
+						<td class="p-3 font-bold">
+							200.00$
+						</td>
+						<td class="p-3">
+							<span class="bg-green-400 text-gray-50 rounded-md px-2">available</span>
+						</td>
+						<td class="p-3 ">
+							<a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
+								<i class="material-icons-outlined text-base">visibility</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100  mx-2">
+								<i class="material-icons-outlined text-base">edit</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100  ml-2">
+								<i class="material-icons-round text-base">delete_outline</i>
+							</a>
+						</td>
+					</tr>
+					<tr class="bg-gray-800">
+						<td class="p-3">
+							<div class="flex align-items-center">
+								<img class="rounded-full h-12 w-12   object-cover" src="https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="unsplash image">
+								<div class="ml-3">
+									<div class="">Realme</div>
+									<div class="text-gray-500">mail@rgmail.com</div>
+								</div>
+							</div>
+						</td>
+						<td class="p-3">
+							Technology
+						</td>
+						<td class="p-3 font-bold">
+							200.00$
+						</td>
+						<td class="p-3">
+							<span class="bg-red-400 text-gray-50 rounded-md px-2">no stock</span>
+						</td>
+						<td class="p-3">
+							<a href="#" class="text-gray-400 hover:text-gray-100  mr-2">
+								<i class="material-icons-outlined text-base">visibility</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100 mx-2">
+								<i class="material-icons-outlined text-base">edit</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100 ml-2">
+								<i class="material-icons-round text-base">delete_outline</i>
+							</a>
+						</td>
+					</tr>
+					<tr class="bg-gray-800">
+						<td class="p-3">
+							<div class="flex align-items-center">
+								<img class="rounded-full h-12 w-12   object-cover" src="https://images.unsplash.com/photo-1600856209923-34372e319a5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2135&q=80" alt="unsplash image">
+								<div class="ml-3">
+									<div class="">Samsung</div>
+									<div class="text-gray-500">mail@rgmail.com</div>
+								</div>
+							</div>
+						</td>
+						<td class="p-3">
+							Technology
+						</td>
+						<td class="p-3 font-bold">
+							200.00$
+						</td>
+						<td class="p-3">
+							<span class="bg-yellow-400 text-gray-50  rounded-md px-2">start sale</span>
+						</td>
+						<td class="p-3">
+							<a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
+								<i class="material-icons-outlined text-base">visibility</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100 mx-2">
+								<i class="material-icons-outlined text-base">edit</i>
+							</a>
+							<a href="#" class="text-gray-400 hover:text-gray-100 ml-2">
+								<i class="material-icons-round text-base">delete_outline</i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<style>
+	.table {
+		border-spacing: 0 15px;
+	}
+
+	i {
+		font-size: 1rem !important;
+	}
+
+	.table tr {
+		border-radius: 20px;
+	}
+
+	tr td:nth-child(n+5),
+	tr th:nth-child(n+5) {
+		border-radius: 0 .625rem .625rem 0;
+	}
+
+	tr td:nth-child(1),
+	tr th:nth-child(1) {
+		border-radius: .625rem 0 0 .625rem;
+	}
+</style>
+{{-- Meetings Table --}}
+<!-- component -->
+<div>
+      <table class="min-w-full table-auto">
+        <thead class="justify-between">
+          <tr class="bg-gray-800">
+            <th class="px-16 py-2">
+              <span class="text-gray-300"></span>
+            </th>
+            <th class="px-16 py-2">
+              <span class="text-gray-300">Name</span>
+            </th>
+            <th class="px-16 py-2">
+              <span class="text-gray-300">Invitation</span>
+            </th>
+            <th class="px-16 py-2">
+              <span class="text-gray-300">Date</span>
+            </th>
+
+            <th class="px-16 py-2">
+              <span class="text-gray-300">Time</span>
+            </th>
+
+            <th class="px-16 py-2">
+              <span class="text-gray-300">Status</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="bg-gray-200">
+          <tr class="bg-white border-4 border-gray-200">
+            <td class="px-16 py-2 flex flex-row items-center">
+              <img
+                class="h-8 w-8 rounded-full object-cover "
+                src="https://randomuser.me/api/portraits/men/30.jpg"
+                alt=""
+              />
+            </td>
+            <td>
+              <span class="text-center ml-2 font-semibold">Dean Lynch</span>
+            </td>
+            <td class="px-16 py-2">
+              <button class="bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-white hover:border-indigo-500 hover:text-black ">
+                Open Link
+              </button>
+            </td>
+            <td class="px-16 py-2">
+              <span>05/06/2020</span>
+            </td>
+            <td class="px-16 py-2">
+              <span>10:00</span>
+            </td>
+
+            <td class="px-16 py-2">
+              <span class="text-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h5 "
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#2c3e50"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <path d="M5 12l5 5l10 -10" />
+                </svg>
+              </span>
+            </td>
+          </tr>
+          <tr class="bg-white border-4 border-gray-200">
+            <td class="px-16 py-2 flex flex-row items-center">
+            <img
+                  class="h-8 w-8 rounded-full object-cover "
+                  src="https://randomuser.me/api/portraits/men/76.jpg"
+                  alt=""
+                />
+            </td>
+            <td>
+              <span class="text-center ml-2 font-semibold">Ralph Barnes</span>
+            </td>
+            <td class="px-16 py-2">
+              <button class="bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-white hover:border-indigo-500 hover:text-black ">
+                Open Link
+              </button>
+            </td>
+            <td class="px-16 py-2">
+              <span>05/06/2020</span>
+            </td>
+            <td class="px-16 py-2">
+              <span>12:15</span>
+            </td>
+
+            <td class="px-16 py-2">
+              <span class="text-yellow-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#2c3e50"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <circle cx="12" cy="12" r="9" />
+                  <polyline points="12 7 12 12 15 15" />
+                </svg>
+              </span>
+            </td>
+          </tr>
+          <tr class="bg-white border-4 border-gray-200">
+            <td class="px-16 py-2 flex flex-row items-center">
+            <img
+                  class="h-8 w-8 rounded-full object-cover "
+                  src="https://randomuser.me/api/portraits/men/38.jpg"
+                  alt=""
+                />
+            </td>
+            <td>
+              <span class="text-center ml-2 font-semibold">Brett Castillo</span>
+            </td>
+            <td class="px-16 py-2">
+              <button class="bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-white hover:border-indigo-500 hover:text-black ">
+                Open Link
+              </button>
+            </td>
+            <td class="px-16 py-2">
+              <span>05/06/2020</span>
+            </td>
+            <td class="px-16 py-2">
+              <span>08:35</span>
+            </td>
+
+            <td class="px-16 py-2">
+              <span class="text-yellow-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#2c3e50"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    {{-- responsive table --}}
+    <!-- component -->
+<table class="border-collapse w-full">
+    <thead>
+        <tr>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Company name</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Country</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Status</th>
+            <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Company name</span>
+                KnobHome
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Country</span>
+                German
+            </td>
+          	<td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Status</span>
+                <span class="rounded bg-red-400 py-1 px-3 text-xs font-bold">deleted</span>
+          	</td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>
+                <a href="#" class="text-blue-400 hover:text-blue-600 underline">Edit</a>
+                <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Remove</a>
+            </td>
+        </tr>
+        <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Company name</span>
+                Squary
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Country</span>
+                Schweden
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Status</span>
+                <span class="rounded bg-green-400 py-1 px-3 text-xs font-bold">active</span>
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>
+                <a href="#" class="text-blue-400 hover:text-blue-600 underline">Edit</a>
+                <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Remove</a>
+            </td>
+        </tr>
+        <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Company name</span>
+				ghome
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Country</span>
+                Switzerland
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Status</span>
+                <span class="rounded bg-yellow-400 py-1 px-3 text-xs font-bold">inactive</span>
+            </td>
+            <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>
+                <a href="#" class="text-blue-400 hover:text-blue-600 underline">Edit</a>
+                <a href="#" class="text-blue-400 hover:text-blue-600 underline pl-6">Remove</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{-- form with file input --}}
+<!-- component -->
+<div class="flex h-screen bg-gray-200 items-center justify-center  mt-32 mb-32">
+  <div class="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2">
+    <div class="flex justify-center py-4">
+      <div class="flex bg-purple-200 rounded-full md:p-4 p-2 border-2 border-purple-300">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div class="flex">
+        <h1 class="text-gray-600 font-bold md:text-2xl text-xl">Tailwind Form</h1>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 mt-5 mx-7">
+      <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Input 1</label>
+      <input class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Input 1" />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
+      <div class="grid grid-cols-1">
+        <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Input 2</label>
+        <input class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Input 2" />
+      </div>
+      <div class="grid grid-cols-1">
+        <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Input 3</label>
+        <input class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Input 3" />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 mt-5 mx-7">
+      <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Selection</label>
+      <select class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+    </div>
+
+    <div class="grid grid-cols-1 mt-5 mx-7">
+      <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Another Input</label>
+      <input class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Another Input" />
+    </div>
+
+    <div class="grid grid-cols-1 mt-5 mx-7">
+      <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold mb-1">Upload Photo</label>
+        <div class='flex items-center justify-center w-full'>
+            <label class='flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-100 hover:border-purple-300 group'>
+                <div class='flex flex-col items-center justify-center pt-7'>
+                  <svg class="w-10 h-10 text-purple-400 group-hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                  <p class='lowercase text-sm text-gray-400 group-hover:text-purple-600 pt-1 tracking-wider'>Select a photo</p>
+                </div>
+              <input type='file' class="hidden" />
+            </label>
+        </div>
+    </div>
+
+    <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
+      <button class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Cancel</button>
+      <button class='w-auto bg-purple-500 hover:bg-purple-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Create</button>
+    </div>
+
+  </div>
+</div>
+
+{{-- Contact Form --}}
+
+    <section class="w-full max-w-2xl px-6 py-4 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+        <h2 class="text-3xl font-semibold text-center text-gray-800 dark:text-white">Get in touch</h2>
+        <p class="mt-3 text-center text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
+        <div class="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
+            <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+
+                <span class="mt-2">121 Street, NY</span>
+            </a>
+
+            <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+
+                <span class="mt-2">+2499999666600</span>
+            </a>
+
+            <a href="#" class="flex flex-col items-center px-4 py-3 text-gray-700 rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+
+                <span class="mt-2">example@example.com</span>
+            </a>
+        </div>
+
+        <div class="mt-6 ">
+            <div class="items-center -mx-2 md:flex">
+                <div class="w-full mx-2">
+                    <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Name</label>
+
+                    <input class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="text">
+                </div>
+
+                <div class="w-full mx-2 mt-4 md:mt-0">
+                    <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">E-mail</label>
+
+                    <input class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="email">
+                </div>
+            </div>
+
+            <div class="w-full mt-4">
+                <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Message</label>
+
+                <textarea class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
+            </div>
+
+            <div class="flex justify-center mt-6">
+                <button class="px-4 py-2 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Send Message</button>
+            </div>
+        </div>
+    </section>
