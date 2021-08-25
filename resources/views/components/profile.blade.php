@@ -21,7 +21,7 @@
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
-
+ @foreach ($users as $user)
 
       <div class="container mx-auto my-5 p-5">
           <div class="md:flex no-wrap md:-mx-2 ">
@@ -30,19 +30,18 @@
                   <!-- Profile Card -->
                   <div class="bg-white p-3 border-t-4 border-green-400">
                       <div class="image overflow-hidden">
-                          <img class="h-auto w-full mx-auto"
+                          <img class=" h-auto w-full mx-auto" src="{{url('/images/defaultimage.png')}}" alt="">
+                          <!-- <img class="h-auto w-full mx-auto  h-24 w-24 md rounded-full relative "
                               src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
-                              alt="">
+                              alt=""> -->
                       </div>
 
 
-                      @foreach($details as $detail)
+
 
                       <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">{{Auth::user()->name}}</h1>
-                      <h3 class="text-gray-600 font-lg text-semibold leading-6">Owner at Her Company Inc.</h3>
-                      <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
-                          consectetur adipisicing elit.
-                          Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
+                      <h3 class="text-gray-600 font-lg text-semibold leading-6">Profile Description</h3>
+                      <p class="text-sm text-gray-500 hover:text-gray-600 leading-6"> Student of the University of Malawi Chancellor College</p>
                       <ul
                           class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                           <li class="flex items-center py-3">
@@ -51,8 +50,8 @@
                                       class="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
                           </li>
                           <li class="flex items-center py-3">
-                              <span>Member since</span>
-                              <span class="ml-auto">Nov 07, 2016</span>
+                              <span>Enrolled In:</span>
+                              <span class="ml-auto"></span>
                           </li>
                       </ul>
                   </div>
@@ -84,34 +83,34 @@
                                   <div class="px-4 py-2">{{Auth::user()->name}}</div>
                               </div>
                               <div class="grid grid-cols-2">
-                                  <div class="px-4 py-2 font-semibold">{{$detail->last_name}}</div>
-                                  <div class="px-4 py-2">Doe</div>
+                                  <div class="px-4 py-2 font-semibold">Last Name:</div>
+                                  <div class="px-4 py-2">{{$user->last_name}}</div>
                               </div>
                               <div class="grid grid-cols-2">
-                                  <div class="px-4 py-2 font-semibold">Gender</div>
-                                  <div class="px-4 py-2">Female</div>
+                                  <div class="px-4 py-2 font-semibold">Gender:</div>
+                                  <div class="px-4 py-2"></div>
                               </div>
                               <div class="grid grid-cols-2">
-                                  <div class="px-4 py-2 font-semibold">Contact No.</div>
-                                  <div class="px-4 py-2">+11 998001001</div>
+                                  <div class="px-4 py-2 font-semibold">Contact No:</div>
+                                  <div class="px-4 py-2"></div>
                               </div>
                               <div class="grid grid-cols-2">
-                                  <div class="px-4 py-2 font-semibold">Current Address</div>
-                                  <div class="px-4 py-2">Beech Creek, PA, Pennsylvania</div>
+                                  <div class="px-4 py-2 font-semibold">Current Address:</div>
+                                  <div class="px-4 py-2"></div>
                               </div>
                               <div class="grid grid-cols-2">
-                                  <div class="px-4 py-2 font-semibold">Permanant Address</div>
-                                  <div class="px-4 py-2">Arlington Heights, IL, Illinois</div>
+                                  <div class="px-4 py-2 font-semibold">Registration Number:</div>
+                                  <div class="px-4 py-2"></div>
                               </div>
                               <div class="grid grid-cols-2">
-                                  <div class="px-4 py-2 font-semibold">Email.</div>
+                                  <div class="px-4 py-2 font-semibold">Email.Address</div>
                                   <div class="px-4 py-2">
                                       <a class="text-blue-800" href="mailto:jane@example.com">{{Auth::user()->email}}</a>
                                   </div>
                               </div>
                               <div class="grid grid-cols-2">
-                                  <div class="px-4 py-2 font-semibold">Birthday</div>
-                                  <div class="px-4 py-2">Feb 06, 1998</div>
+                                  <div class="px-4 py-2 font-semibold">Program Of Study:</div>
+                                  <div class="px-4 py-2"></div>
                               </div>
                           </div>
                       </div>
@@ -138,7 +137,7 @@
                                   </span>
                                   <span class="tracking-wide">Experience</span>
                               </div>
-                              <ul class="list-inside space-y-2">
+                              <!-- <ul class="list-inside space-y-2">
                                   <li>
                                       <div class="text-teal-600">Owner at Her Company Inc.</div>
                                       <div class="text-gray-500 text-xs">March 2020 - Now</div>
@@ -155,7 +154,7 @@
                                       <div class="text-teal-600">Owner at Her Company Inc.</div>
                                       <div class="text-gray-500 text-xs">March 2020 - Now</div>
                                   </li>
-                              </ul>
+                              </ul> -->
                           </div>
                           <div>
                               <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-3">
@@ -173,13 +172,10 @@
                               </div>
                               <ul class="list-inside space-y-2">
                                   <li>
-                                      <div class="text-teal-600">Masters Degree in Oxford</div>
-                                      <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                                      <div class="text-teal-600">University Of Malawi Chancellor College</div>
+                                      <div class="text-gray-500 text-xs">Bachellor's degree</div>
                                   </li>
-                                  <li>
-                                      <div class="text-teal-600">Bachelors Degreen in LPU</div>
-                                      <div class="text-gray-500 text-xs">March 2020 - Now</div>
-                                  </li>
+
                               </ul>
                           </div>
                       </div>
@@ -196,5 +192,6 @@
 
 
 
+  @endforeach
+
 </div>
-    @endforeach

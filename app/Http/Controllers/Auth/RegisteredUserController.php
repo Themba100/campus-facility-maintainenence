@@ -21,12 +21,6 @@ class RegisteredUserController extends Controller
      */
     public function create(Request $request)
     {
-      // $data = DB::table('users')->insert([
-      //     'reg_number' => $request->reg_number,
-      //     'contact' => $request->contact_no,
-      //     'gender' => $request->gender,
-      //     'program_of_study' =>$request->program_of_study
-      // ]);
 
         return view('auth.register');
     }
@@ -46,22 +40,6 @@ class RegisteredUserController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
-
-        $path = 'users/images/';
-        $fontPath =public_path('fonts/Oliciy.ttf');
-        $char = strtoupper($request->name[0]);
-        $newAvatarName = rand(12,34353).time().'_avatar.png';
-        $dest =$path.$newAvatarName;
-
-        $createAvatar = makeAvatar($fontPath, $dest, $char);
-        $picture = $createAvatar ==  true ? $newAvatarName : '';
-
-        $user = new User();
-        $user->name = $request->name;
-        $user->email= $request->email;
-        $user->role = Auth::user()->role;
-        $user->password = \Hash::make($request->password);
-        $user->avatar = $picture;
 
         $user = User::create([
             'name' => $request->name,

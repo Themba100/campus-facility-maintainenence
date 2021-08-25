@@ -7,7 +7,7 @@ use App\Http\Controllers\SeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\NotificationController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminLoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,8 +24,7 @@ Route::get('/', function () {
 });
 // auth route for both
 Route::group(['middleware'=> ['auth']],function(){
-        Route::get('/dashboard','App\http\Controllers\DashboardController@index')->name
-        ('dashboard');
+        Route::get('/dashboard','App\http\Controllers\DashboardController@index')->name('dashboard');
 });
 // for students
 Route::group(['middleware' =>['auth','role:student']],function(){
@@ -37,15 +36,23 @@ Route::group(['middleware' => ['auth', 'role:staff']], function () {
     Route::get('/dashboard/myprofile1', 'App\Http\Controllers\DashboardController@myprofile1')
         ->name('dashboard.myprofile1');
 });
+// Route::fallback(function () {
+//     return view('index');
+// });
 Route::get('/staffdashboard',[DashboardController::class,'index'])->name('staffdashboard.index');
 Route::get('/studentdashboard',[DashboardController::class,'index'])->name('studentdashboard.index');
 Route::get('/account',[AccountController::class,'account'])->name('staff.account');
-Route::get('/myprofile',[UserController::class,'profile'])->name('myprofile.profile');
-Route::get('/Profile',[DashboardController::class,'myprofile'])->name('profile.myprofile');
+// Route::get('/myprofile',[SeController::class,'profile'])->name('myprofile.profile');
+// Route::get('/Profile',[SeController::class,'student_prof'])->name('myprofile.student_prof');
+Route::get('/Profile',[SeController::class,'fetchUsers'])->name('myprofile.fetchusers');
 Route::get('/faults',[FaultController::class,'fault'])->name('staff.faults');
-Route::post('/update',[DashboardController::class,'update_avatar'])->name('update.update_avatar');
+// Route::post('/update',[DashboardController::class,'update_avatar'])->name('update.update_avatar');
+Route::get('/staff-settings',[SeController::class,'accountSettings1'])->name('settings.accountsettings1');
 Route::get('/settings',[SeController::class,'accountSettings'])->name('settings.accountsettings');
-Route::get('/notification',[NotificationController::class,'Notify'])->name('notification.notify');
-Route::get('/student_fault',[FaultController::class,'studentFault'])->name('studentfault.studentfault');
+Route::get('/notification',[SeController::class,'Notify'])->name('notification.notify');
+Route::get('/student_fault',[SeController::class,'studentFault'])->name('studentfault.studentfault');
 Route::post('/Profile',[SeController::class,'insertData'])->name('profile.insertdata');
+Route::get('/admin/login',[AdminLoginController::class,'login']);
+Route::get('/admin/register',[AdminLoginController::class,'register']);
+
 require __DIR__.'/auth.php';

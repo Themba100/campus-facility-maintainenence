@@ -19,6 +19,10 @@ class AuthenticatedSessionController extends Controller
     {
         return view('auth.login');
     }
+    public function createStaff()
+    {
+        return view('auth.login1');
+    }
 
     /**
      * Handle an incoming authentication request.
@@ -34,6 +38,14 @@ class AuthenticatedSessionController extends Controller
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }
+    public function storeStaff(LoginRequest $request)
+    {
+        $request->authenticate();
+
+        $request->session()->regenerate();
+
+        return redirect()->intended(RouteServiceProvider::HOME);
+    }
 
     /**
      * Destroy an authenticated session.
@@ -42,6 +54,16 @@ class AuthenticatedSessionController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
+    public function destroyStaff(Request $request)
     {
         Auth::guard('web')->logout();
 

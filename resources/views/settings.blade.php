@@ -143,7 +143,7 @@
 
           <ul class="flex flex-end  items-center">
             <li>
-              <button
+              <!-- <button
                 aria-hidden="true"
                 @click="toggleTheme"
                 class="group p-2 transition-colors duration-200 rounded-full shadow-md bg-blue-200 hover:bg-blue-200 dark:bg-gray-50 dark:hover:bg-gray-200 text-gray-900 focus:outline-none"
@@ -182,7 +182,7 @@
                     d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
                   />
                 </svg>
-              </button>
+              </button> -->
             </li>
             <li>
               <div class="block w-px h-6 mx-3 bg-gray-400 dark:bg-gray-700"></div>
@@ -199,8 +199,8 @@
                         <span class="text-white inline-flex mr-1">
                           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
                         </span>
-                        {{ __('Logout') }}
-
+                        <!-- {{ __('Logout') }} -->
+                          <button class="text-white"> Log out</button>
 
 
 
@@ -240,12 +240,12 @@
               </a>
             </li>
             <li>
-              <a href="#" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <!-- <a href="#" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
                 </span>
                 <span class="ml-2 text-sm tracking-wide truncate">Messages</span>
-              </a>
+              </a> -->
             </li>
             <li>
               <a href="{{route('notification.notify')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
@@ -262,7 +262,7 @@
               </div>
             </li>
             <li>
-              <a href="{{route('profile.myprofile')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+              <a href="{{route('myprofile.fetchusers')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                 <span class="inline-flex justify-center items-center ml-4">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                 </span>
@@ -281,7 +281,7 @@
               </a>
             </li>
           </ul>
-          <p class="mb-14 px-5 py-3 hidden md:block text-center text-xs">Copyright @2021</p>
+          <p class="mb-14 px-5 py-3 hidden md:block text-center text-xs">Campus Facility Maintainence &copy;2021</p>
         </div>
       </div>
       <!-- ./Sidebar -->

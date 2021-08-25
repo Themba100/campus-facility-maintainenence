@@ -3,7 +3,7 @@
         <x-slot name="logo">
           <img src="{{url('/images/UnimaLogo.png')}}" className ="w-18 h-12"  />
             <a href="/">
-              
+
             </a>
         </x-slot>
 
@@ -15,6 +15,7 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
+            <label for="students_portal" class="right font-bold text-gray-800 flex justify-center text-100-px">Students Portal </label>
 
             <!-- Email Address -->
             <div>
@@ -48,7 +49,7 @@
                     </a>
                 @endif
 
-                <x-button class="ml-3">
+                <x-button class="ml-3 bg-blue-800 hover:bg-blue-900">
                     {{ __('Log in') }}
                 </x-button>
             </div>

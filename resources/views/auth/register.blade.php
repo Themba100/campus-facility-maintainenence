@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                  <img src="{{url('/images/UnimaLogo.png')}}" className ="w-18 h-12"  />
             </a>
         </x-slot>
 
@@ -44,40 +44,7 @@
                                 type="password"
                                 name="password_confirmation" required />
             </div>
-            <!-- Registraion Number -->
             <div class="mt-4">
-                <x-label for="reg_number" :value="__('Registration Number')" />
-
-                <x-input id="registration_number" class="block mt-1 w-full"
-                                type="text"
-                                name="reg_number" required />
-            </div>
-              <!-- Contact Number -->
-            <div class="mt-4">
-                <x-label for="contact" :value="__('Contact Number')" />
-
-                <x-input id="contact_no" class="block mt-1 w-full"
-                                type="number"
-                                name="contact" required />
-            </div>
-              <!-- Gender-->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Gender')" />
-                <select name="role_id" class="mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                    <option value="student">Male</option>
-                    <option value="staff">Female</option>
-                </select>
-            </div>
-            <!-- Program Of Study -->
-            <div class ="mt-4">
-              <div class="mt-4">
-                  <x-label for="program_of_study" :value="__('Program Of Study')" />
-
-                  <x-input id="program_of_study" class="block mt-1 w-full"
-                                  type="text"
-                                  name="program_of_study" required />
-              </div>
-
                 <x-label for= ="role_id" value="{{__('Register as:')}}" />
                 <select name="role_id" class="mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                     <option value="student">Student</option>
@@ -85,12 +52,13 @@
                 </select>
             </div>
 
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-button class="ml-4">
+                <x-button class="ml-4 bg-blue-800 hover:bg-blue-900">
                     {{ __('Register') }}
                 </x-button>
             </div>

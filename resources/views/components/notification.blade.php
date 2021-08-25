@@ -6,7 +6,7 @@
       <div class="rounded-t mb-0 px-0 border-0">
         <div class="flex flex-wrap items-center px-4 py-2">
           <div class="relative w-full max-w-full flex-grow flex-1">
-            <h3 class="font-semibold text-base text-gray-900 dark:text-gray-50">Social Traffic</h3>
+            <h3 class="font-semibold text-base text-gray-900 dark:text-gray-50">Newsfeed</h3>
           </div>
           <div class="relative w-full max-w-full flex-grow flex-1 text-right">
             <button class="bg-blue-500 dark:bg-gray-100 text-white active:bg-blue-600 dark:text-gray-800 dark:active:text-gray-700 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
@@ -107,7 +107,7 @@
     <div class="rounded-t mb-0 px-0 border-0">
       <div class="flex flex-wrap items-center px-4 py-2">
         <div class="relative w-full max-w-full flex-grow flex-1">
-          <h3 class="font-semibold text-base text-gray-900 dark:text-gray-50">Recent Activities</h3>
+          <h3 class="font-semibold text-base text-gray-900 dark:text-gray-50">Recent Notifications</h3>
         </div>
         <div class="relative w-full max-w-full flex-grow flex-1 text-right">
           <button class="bg-blue-500 dark:bg-gray-100 text-white active:bg-blue-600 dark:text-gray-800 dark:active:text-gray-700 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
@@ -125,7 +125,7 @@
             <div class="flex-grow flex items-center border-b border-gray-100 dark:border-gray-400 text-sm text-gray-600 dark:text-gray-100 py-2">
               <div class="flex-grow flex justify-between items-center">
                 <div class="self-center">
-                  <a class="font-medium text-gray-800 hover:text-gray-900 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">Nick Mark</a> mentioned <a class="font-medium text-gray-800 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">Sara Smith</a> in a new post
+                  <a class="font-medium text-gray-800 hover:text-gray-900 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">One issue resolved</a>  <a class="font-medium text-gray-800 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">please check the dashboard for further details</a>
                 </div>
                 <div class="flex-shrink-0 ml-2">
                   <a class="flex items-center font-medium text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-500" href="#0" style="outline: none;">
@@ -142,7 +142,7 @@
             <div class="flex-grow flex items-center border-gray-100 text-sm text-gray-600 dark:text-gray-50 py-2">
               <div class="flex-grow flex justify-between items-center">
                 <div class="self-center">
-                  The post <a class="font-medium text-gray-800 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">Post Name</a> was removed by <a class="font-medium text-gray-800 hover:text-gray-900 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">Nick Mark</a>
+                  You have to  <a class="font-medium text-gray-800 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;"> settle </a>your balance  <a class="font-medium text-gray-800 hover:text-gray-900 dark:text-gray-50 dark:hover:text-gray-100" href="#0" style="outline: none;">with the finance</a>
                 </div>
                 <div class="flex-shrink-0 ml-2">
                   <a class="flex items-center font-medium text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-500" href="#0" style="outline: none;">
