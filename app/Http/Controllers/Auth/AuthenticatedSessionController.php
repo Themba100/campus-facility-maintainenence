@@ -23,6 +23,10 @@ class AuthenticatedSessionController extends Controller
     {
         return view('auth.login1');
     }
+     public function createAdmin()
+    {
+        return view('admin.login');
+    }
 
     /**
      * Handle an incoming authentication request.
@@ -39,6 +43,14 @@ class AuthenticatedSessionController extends Controller
         return redirect()->intended(RouteServiceProvider::HOME);
     }
     public function storeStaff(LoginRequest $request)
+    {
+        $request->authenticate();
+
+        $request->session()->regenerate();
+
+        return redirect()->intended(RouteServiceProvider::HOME);
+    }
+     public function storeAdmin(LoginRequest $request)
     {
         $request->authenticate();
 

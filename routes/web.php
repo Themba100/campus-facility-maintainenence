@@ -26,6 +26,9 @@ Route::get('/', function () {
 Route::group(['middleware'=> ['auth']],function(){
         Route::get('/dashboard','App\http\Controllers\DashboardController@index')->name('dashboard');
 });
+Route::group(['middleware'=> ['auth']],function(){
+        Route::get('/admindashboard','App\http\Controllers\DashboardController@index')->name('admin.dashboard');
+});
 // for students
 Route::group(['middleware' =>['auth','role:student']],function(){
     Route::get('/dashboard/myprofile','App\Http\Controllers\DashboardController@myprofile')
@@ -35,6 +38,11 @@ Route::group(['middleware' =>['auth','role:student']],function(){
 Route::group(['middleware' => ['auth', 'role:staff']], function () {
     Route::get('/dashboard/myprofile1', 'App\Http\Controllers\DashboardController@myprofile1')
         ->name('dashboard.myprofile1');
+});
+// for admins
+Route::group(['middleware' =>['auth','role:admin']],function(){
+    Route::get('/dashboard/adminmyprofile','App\Http\Controllers\DashboardController@myprofile')
+    ->name('dashboard.adminprofile');
 });
 // Route::fallback(function () {
 //     return view('index');
@@ -52,7 +60,8 @@ Route::get('/settings',[SeController::class,'accountSettings'])->name('settings.
 Route::get('/notification',[SeController::class,'Notify'])->name('notification.notify');
 Route::get('/student_fault',[SeController::class,'studentFault'])->name('studentfault.studentfault');
 Route::post('/Profile',[SeController::class,'insertData'])->name('profile.insertdata');
-Route::get('/admin/login',[AdminLoginController::class,'login']);
-Route::get('/admin/register',[AdminLoginController::class,'register']);
-
+Route::get('/admin/login',[AdminLoginController::class,'login'])->name('admin.login');
+Route::get('/admin/register',[AdminLoginController::class,'register'])->name('admin.register');
+Route::post('/admin/save',[AdminLoginController::class,'save'])->name('admin.save');
+Route::post('/admin/check',[AdminLoginController::class,'check'])->name('admin.check');
 require __DIR__.'/auth.php';

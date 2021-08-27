@@ -18,17 +18,25 @@ Route::get('/register', [RegisteredUserController::class, 'create'])
 Route::post('/register', [RegisteredUserController::class, 'store'])
                 ->middleware('guest');
 
-
+                //student routes  
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
                 ->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
                 ->middleware('guest');
+                // staff routes
 Route::get('/log-in', [AuthenticatedSessionController::class, 'createStaff'])
                 ->middleware('guest')
                 ->name('loginstaff');
 Route::post('/log-in', [AuthenticatedSessionController::class, 'storeStaff'])
                                 ->middleware('guest');
+                                // admin routes
+Route::get('/admin/login', [AuthenticatedSessionController::class, 'createAdmin'])
+                ->middleware('guest')
+                ->name('loginadmin');
+Route::post('/admin/login', [AuthenticatedSessionController::class, 'storeAdmin'])
+                                ->middleware('guest');
+
 
 
 Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
