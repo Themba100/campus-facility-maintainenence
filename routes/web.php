@@ -64,4 +64,6 @@ Route::get('/admin/login',[AdminLoginController::class,'login'])->name('admin.lo
 Route::get('/admin/register',[AdminLoginController::class,'register'])->name('admin.register');
 Route::post('/admin/save',[AdminLoginController::class,'save'])->name('admin.save');
 Route::post('/admin/check',[AdminLoginController::class,'check'])->name('admin.check');
+Route::post('/faults',[DashboardController::class,'report'])->name('staff.report');
+Route::get('/users',[DashboardController::class,'user'])->name('staff.user');
 require __DIR__.'/auth.php';
