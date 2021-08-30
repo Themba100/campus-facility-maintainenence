@@ -57,10 +57,10 @@ class DashboardController extends Controller
             $user->save();
             return back()->with('success');
         }
-        public function report(Request $request,$role_id,$user_id,$user_type)
+        public function report(Request $request,$id,$user_id)
         {
 
-            $user = Role::find($role_id,$user_id,$user_type);
+            $user = Role::find($id,$user_id);
             $fault = new Fault;
             $fault->fault_name = $request->fault_name;
             $fault->category = $request->category;
