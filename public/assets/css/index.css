@@ -1,0 +1,330 @@
+body{
+    background:whitesmoke;
+    padding: 0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+.navbar1{
+    background:#333;
+    /* padding:3px; */
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0; */
+
+}
+.navbar1 ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    padding: 3px;
+}
+.navbar1 ul li{
+    margin:0 15px;
+}
+.navbar1 ul li a{
+    color:white;
+    text-decoration: none;
+}
+.heading-primary{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 33px;
+    font-weight: 100;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom,red,transparent);
+    color:transparent;
+    margin: 0;
+    padding:0;
+}
+.red-t{
+    color:red;
+}
+.heading-secondary{
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+
+}
+.highlight{
+   color: transparent;
+   -webkit-background-clip: text;
+   background-image: linear-gradient(to right, skyblue, white);
+}
+.addImage{
+    /* background-image: linear-gradient(to right, navy, transparent),url({{url('images/it.jpg'}}); */
+    height: 600px;
+    background-size: cover;
+    background-position: top;
+
+}
+.main-section{
+    background-image:
+    url("http://localhost/laraAuth/public/assets/css/img/4.jpg");
+    /* filter:blur(8px);
+    -webkit-filter: blur(8px); */
+  background-size: cover;
+    background-position: top;
+    height: 650px;
+    padding:5px;
+    text-align: center;
+}
+.pos{
+    /* position: relative; */
+}
+
+.pos-abs{
+    position:absolute;
+    top:37%;
+    /* text-align: center; */
+    left:5%;
+    animation-name: MoveInTop;
+    animation-duration: 3s;
+    animation-iteration-count: forwards;
+    animation-timing-function: ease-out;
+
+}
+.heading-secondary{
+    font-weight: 100;
+    letter-spacing: 3px;
+    color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom,red,#333);
+    font-size: 36px;
+    display: block;
+}
+.heading-secondary-main{
+    display: block;
+}
+.heading-secondary-sub{
+    display: block;
+}
+.paragraph{
+    color:white;
+    display:table-row;
+    font-size: 22px;
+}
+.about-us{
+    background:#333;
+    padding:5px;
+}
+.btn1{
+    padding:12px;
+    color:white;
+    border:1px solid transparent;
+    border-radius: 5px;
+    background:brown;
+    display: inline-block;
+
+}
+.btn3{
+      padding:12px;
+      color:white;
+      border:1px solid transparent;
+      border-radius: 5px;
+      background:green;
+      display: inline-block;
+
+}
+.btn3:hover{
+    background: gray;
+    color:black;
+}
+.btn2{
+    padding:10px;
+    background:brown;
+    color:white;
+    border:1px solid transparent;
+    border-radius:5px;
+
+}
+.btn2:hover{
+    background:black;
+    color:red;
+}
+.btn1:hover{
+    background: #333;
+    color:red;
+}
+.heading-tertiary{
+    text-transform: uppercase;
+    color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right,red,orangered);
+    font-weight: 100;
+    letter-spacing: 4px;
+    font-family: 'Times New Roman', Times, serif;
+}
+hr{
+    color:black;
+}
+.paragraph{
+    color:black;
+}
+.paragraph1{
+    font-size: 17px;
+    color:white;
+}
+.responsive-img{
+    width:100%;
+    transform: scale(0.8);
+}
+.card {
+    padding: 8px;
+
+}
+.card-content{
+    /* background: #333; */
+}
+.btn1-indigo{
+    width:60px;
+}
+.contact-us{
+    background-image: url("http://localhost/laraAuth/public/assets/css/img/2.jpg");
+    /* filter: blur(5px);
+    -webkit-filter: blur(5px); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5px;
+}
+.card-grey{
+    background-color: #333;
+}
+.section-footer{
+    background: #333;
+    padding:15px;
+    color:white;
+}
+.main-footer{
+    background: dimgrey;
+    color:white;
+    text-align: center;
+    padding:10px;
+}
+.main-footer a{
+    text-decoration: none;
+    color:black;
+}
+.nav-links li a:hover{
+    background:brown;
+    color: black;
+}
+@keyframes MoveInTop
+
+{
+    0%{
+        opacity:0;
+        transform: translateY(100px);
+    }
+    80%{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+
+}
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(81px);
+    }
+
+    50% {}
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@media screen and (max:990px){
+  .main-section {
+      background-position: top;
+      height: 370.5px;
+      position: relative;
+      margin: 0;
+      width: 100%;
+  }
+  .contact-us{
+        background-position: top;
+        height: 370.5px;
+        position: relative;
+        margin: 0;
+        width: 100%;
+  }
+  .heading-primary{
+      font-size: 15px;
+  }
+.heading-primary-main{
+    transform: scale(1.4);
+    font-size: 12px;
+}
+.heading-primary-sub {
+    transform: scale(1.4);
+    font-size: 12px;
+}
+  .heading-secondary{
+      transform: scale(1.4);
+      font-size: 15px;
+  }
+}
+.bg-image{
+    background-image:url("http://localhost/laraAuth/public/assets/css/img/8.jpg");
+    background-size: cover;
+    height:900px;
+    background-position: top;
+    ;
+}
+.custom1{
+    background-image: linear-gradient(to top,white,transparent);
+    color:red;
+}
+.custom2{
+    color:gold;
+    background-image: linear-gradient(to bottom,white,transparent);
+}
+
+.custom3{
+    color:gold;
+    background-image: linear-gradient(to left,white,transparent);
+}
+
+.icons{
+    font-size: 30px;
+}
+.icons i:hover{
+    animation: moveUpwards;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    transition: all;
+    transform: translateY(-18px);
+    color:white;
+}
+.fa-facebook {
+    color: transparent;
+    background-image: linear-gradient(to bottom, brown, transparent);
+    -webkit-background-clip: text;
+
+}
+.fa-instagram{
+    color:transparent;
+    background-image: linear-gradient(to bottom,brown,transparent);
+    -webkit-background-clip: text;
+}
+.fa-twitter {
+    color: transparent;
+    background-image: linear-gradient(to bottom, brown, transparent);
+    -webkit-background-clip: text;
+}
+.fa-linkedin {
+    color: transparent;
+    background-image: linear-gradient(to bottom, brown, transparent);
+    -webkit-background-clip: text;
+}
+.fa-cart{
+    font-size: 23px;
+}

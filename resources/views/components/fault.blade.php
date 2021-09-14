@@ -1,4 +1,12 @@
+@extends('layout.master')
+@section('content')
 <div>
+        @if(Session::has('The fault has been reported successifully'))
+        <div class="alert alert-success">
+            {{Session::get('The fault has been reported successifully')}}
+        </div>
+        @endif
+
             <form action="{{route('staff.report')}}" method="POST">
                @csrf
     
@@ -22,8 +30,12 @@
 
                 <div class="w-full mx-2 mt-4 md:mt-0">
                     <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">category</label>
-
-                    <input name="category" class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="text" required>
+                    <select name="category" id="" class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" required>
+                    <option value="electric_fault">Electric Fault</option>
+                    <option value="broken_utilities">Broken Utilities</option>
+                    <option value="washrooms">Washrooms</option>
+                    </select>
+                    <!-- <input name="category" class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="text" required> -->
                 </div>
                  <div class="w-full mx-2 mt-4 md:mt-0">
                     <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Location</label>
@@ -45,3 +57,4 @@
     </section>
 </form>
 </div>
+@endsection

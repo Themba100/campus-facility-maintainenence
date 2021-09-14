@@ -20,10 +20,10 @@ class CreateFaultsTable extends Migration
             $table->string('category');
             $table->string('location');
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('role_id')->unsigned();
-            $table->string('user_type');
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+            // $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->foreign('user_id')->references('user_id')->on('role_user')->onDelete('cascade');
+            $table->string('email');
+            $table->string('username');
             $table->string('description');
             $table->timestamps();
         });

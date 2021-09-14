@@ -102,7 +102,7 @@
                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
                  </span>
                  <span class="ml-2 text-sm tracking-wide truncate">Notifications</span>
-                 <!-- <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span> -->
+                 <!-- <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full"></span> -->
                </a>
              </li>
              <li class="px-5 hidden md:block">
@@ -133,61 +133,33 @@
            <p class="mb-14 px-5 py-3 hidden md:block text-center text-xs">Campus Facility Maintainence &copy; 2021</p>
          </div>
        </div>
-       <!-- ./Sidebar -->
-
-    <!-- <div class="w-full overflow-hidden rounded-lg shadow-xs">
-
-
-      <div class="w-full overflow-x-auto">
-        <table class="w-full">
-          <thead>
-            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-              <th class="px-4 py-3">Faults</th>
-              <th class="px-4 py-3">Category</th>
-              <th class="px-4 py-3">Status</th>
-              <th class="px-4 py-3">Date</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-
-            
-
-            <tr class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
-              <td class="px-4 py-3">
-                <div class="flex items-center text-sm">
-                  <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-
-                    -->
+       <!-- ./Sidebar -->    
                     <section style="padding-left:130px; padding-top:90px;">
                     <div class="container">
                         <div class="row center">
                             <div class="col m12 s8">
                         <div class="card">
-                            <div class="card-panel">
-                                    <h4 class="uppercase text-center">
-                                            Reported Faults
-                                    </h4>
-                            </div>
-                            <div class="card-content">
-                                <table class=" responsive-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Fault Name</th>
-                                            <th>Category</th>
-                                            <th>Location</th>
-                                            <th>User Email</th>
-                                            <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Reported date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                     
-                                    
-                                    
-                                    </tbody>
-                                
-                                </table>
+                    <div class="card-panel">
+                      <h5 class="uppercase">Notifications</h5>
+                    </div>
+                    <div class="card-content">
+            <table class="stripped">
+                  <thead>
+                    <tr>Recent Activity</tr>
+                    <tr>Action</tr>
+                  </thead>
+                  <tbody>
+                  @foreach   ($user->notification as $notification)
+                        <tr>
+                            <td>{{$notification->data['fault_name']}}</td>
+                        
+                        </tr>
+                  
+                  @endforeach
+              </tbody>
+            </table> 
+                   </div>
+                </div>
                             </div>
                         </div></div>
                         </div>

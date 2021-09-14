@@ -14,6 +14,8 @@ class Fault extends Model
     {
         return $this->belongsTo(Role::class);
     }
-
+    protected $fillable = [
+            'fault_name'
+    ];
 
 }

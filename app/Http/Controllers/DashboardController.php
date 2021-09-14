@@ -8,32 +8,38 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Details;
 use App\Models\Fault;
 use App\Models\Role;
+use App\Models\User;
 
 use Image;
+
 class DashboardController extends Controller
 {
     public function index()
     {
         if(Auth::user()->hasRole('student'))
         {
-            return view('studentdashboard');
+            return view('student.dashboard');
         }
         elseif(Auth::user()->hasRole('staff'))
         {
-            return view('staffdashboard');
+            return view('staff.staffdashboard');
         }
         elseif(Auth::user()->hasRole('admin')){
-            return view('admindashboard');
+            return view('admin.dashboard');
         }
     }
+    
+        public function getData(){
+             $issues = Fault::all();
+            return view('admin.dashboard',compact('issues'));    
+        }
+
     public function myprofile(){
       $details = Details::all();
     return view('myprofile',compact('details'));
     }
 
-    public function myprofile1(){
-        return view('myprofile1');
-    }
+    
 
     // public function update_avatar(Request $request)
     // {
@@ -50,34 +56,77 @@ class DashboardController extends Controller
     // }
     // return view('account',  array('user' => Auth::user()));
     // }
-        public function user(){
-            $user = new Role;
-            $user->name = Auth::user()->name;
-            $user->email = Auth::user()->email;
-            $user->save();
-            return back()->with('success');
-        }
-        public function report(Request $request,$id,$user_id)
+  
+        public function notify()
         {
-
-            $user = Role::find($id,$user_id);
-            $fault = new Fault;
-            $fault->fault_name = $request->fault_name;
-            $fault->category = $request->category;
-            $fault->location = $request->location;
-            $fault->description = $request->description;
-            $user->faults()->save($fault);
-
-       if($save){
-
-        return back()->with('Fault Reported','The fault was reported successifully');
+            $notification = auth()->user()->unreadNotifications;
+            return view('admin.dashboard',compact('notification'));
         }
-        else{
-            return back()->with('Failed to report','The fault was not reported');
+        public function markNotification(Request $request){
+            auth()->user()->unreadNotifications
+            ->when($request->input('id'), function ($query) use ($request){
+                return $query->where('id',$request->input('id'));
+            })
+            ->markAsRead();
+
+            return response()->noContent();
         }
+        // if($save){
+
+        //     return back()->with('Fault Reported','The fault was reported successifully');
+        //     }
+        //     else{
+        //         return back()->with('Failed to report','The fault was not reported');
+        //     }
+        
     
-    }
+// staff pages
+public function stafffault()
+{
+    return view('staff.stafffault');
+}
+public function staffNotification()
+{
+    return view('staff.staffnotification');
+}
+public function staffProf()
+{
+    return view('staff.profile');
+}
+public function staffSettings()
+{
+    return view('staff.settings');
+}
+// admin pages
+public function adminFault()
+{
+    return view('admin.faultmanagement');
+}
+public function adminNotification()
+{
+    $user = User::find(1);
+    return view('admin.notification',compact('user'));
+}
+public function adminSettings()
+{
+    return view('admin.settings');
+}
 
+public function studentFault()
+{
+    return view('student.faults');
+}
+public function studentNotification()
+{
+    return view('student.notification');
+}
+public function studentSettings()
+{
+    return view('student.settings');
+}
 
 
 }
+
+
+

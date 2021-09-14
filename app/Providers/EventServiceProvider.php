@@ -17,7 +17,11 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+            // SendPodcastNotification::class
         ],
+        UserReport::class => [
+            UserReportListener::class
+        ]
     ];
 
     /**
@@ -27,6 +31,14 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Event::listen(
+        PodcastProcessed::class,
+        [SendPodcastNotification::class, 'handle']
+    );
+
+    Event::listen(function (PodcastProcessed $event) {
+        
+    });
+
     }
 }
