@@ -10,16 +10,16 @@ use Illuminate\Notifications\Notification;
 class FaultReport extends Notification
 {
     use Queueable;
-
+    public $fault;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($name)
+    public function __construct($fault)
     {
-        $this->fault_name = $name;
-    }
+    $this->fault = $fault;
+  }
 
     /**
      * Get the notification's delivery channels.
@@ -29,7 +29,7 @@ class FaultReport extends Notification
      */
     public function via($notifiable)
     {
-        return ['database'];
+        return ['database','mail'];
     }
 
     /**
@@ -41,9 +41,9 @@ class FaultReport extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
+                    ->line('A new issues has been reported')
                     ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                    ->line('Thank you!');
     }
 
     /**
@@ -55,7 +55,10 @@ class FaultReport extends Notification
     public function toArray($notifiable)
     {
         return [
-            'name' => $this->fault_name
+            'name' => $this->fault->fault_name,
+            'category' => $this->fault->category,
+            'location' => $this->fault->location
+            
         ];
     }
 }

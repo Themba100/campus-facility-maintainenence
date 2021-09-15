@@ -21,7 +21,10 @@ class EventServiceProvider extends ServiceProvider
         ],
         UserReport::class => [
             UserReportListener::class
-        ]
+        ],
+        FaultEvent::class => [
+                FaultEventListenter::class
+            ]
     ];
 
     /**

@@ -79,15 +79,15 @@
                </div>
              </li>
              <li>
-               <a href="{{route('admin.dashboard')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+               <a href="{{route('admin.dashboard')}}" class="text-white relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                  <span class="inline-flex justify-center items-center ml-4">
                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                  </span>
-                 <span class="ml-2 text-sm tracking-wide truncate">Dashboard</span>
+                 <span class="ml-2 text-sm tracking-wide  truncate">Dashboard</span>
                </a>
              </li>
              <li>
-               <a href="{{route('admin.faults')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+               <a href="{{route('admin.faults')}}" class="relative text-white flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                  <span class="inline-flex justify-center items-center ml-4">
                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path></svg>
                  </span>
@@ -97,7 +97,7 @@
              </li>
          
              <li>
-               <a href="{{route('admin.notification')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+               <a href="{{route('admin.notification')}}" class="relative text-white flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                  <span class="inline-flex justify-center items-center ml-4">
                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
                  </span>
@@ -111,7 +111,7 @@
                </div>
              </li>
              <li>
-               <a href="{{route('staffprof.prof')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+               <a href="{{route('staffprof.prof')}}" class="relative flex flex-row text-white items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                  <span class="inline-flex justify-center items-center ml-4">
                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                  </span>
@@ -119,7 +119,7 @@
                </a>
              </li>
              <li>
-               <a href="{{route('admin.settings')}}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+               <a href="{{route('admin.settings')}}" class="relative flex flex-row text-white items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
                  <span class="inline-flex justify-center items-center ml-4">
                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
@@ -158,36 +158,82 @@
                   <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
 
                     -->
-                    <section style="padding-left:130px; padding-top:90px;">
+                   <section >
+                   
+                        
+                        
+                        
                     <div class="container">
-                        <div class="row center">
-                            <div class="col m12 s8">
-                        <div class="card">
-                            <div class="card-panel">
-                                    <h4 class="uppercase text-center">
-                                            Reported Faults
-                                    </h4>
+                         <div class="mt-12 mx-4">
+    <div class="w-full overflow-hidden rounded-lg shadow-xs mx-12">
+
+      <div class="w-full overflow-x-auto">
+      <h5 class=" uppercase font-bold flex justify-center">All Faults</h5>
+        <table class="w-full">
+          <thead>
+            <tr class="text-xs font-bold tracking-wide text-left text-white uppercase border-b dark:border-gray-700 bg-gray-800 dark:text-gray-400 dark:bg-gray-800">
+              <th class="px-4 py-3">Name</th>
+              <th class="px-4 py-3">Email</th>
+              <th class="px-4 py-3">Issue</th>
+              <th class="px-4 py-3">Category</th>
+              <th class="px-4 py-3">Location</th>
+               <th class="px-4 py-3">Description</th>
+              <th class="px-4 py-3">Date</th>
+              <th class="px-4 py-3">Action</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                  @foreach ($issues as $issue)
+         <tr class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
+              <td class="px-4 py-3">
+               
+                  <div>
+                    <p class="text-1xl">{{$issue->username}}</p>
+                    <p class="text-xs text-gray-600 dark:text-gray-400"></p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-sm">{{$issue->email}}</td>        
+              <td class="px-4 py-3 text-sm">{{$issue->fault_name}}</td>
+              <td class="px-4 py-3 text-sm">{{$issue->category}}</td>
+              <td class="px-4 py-3 text-sm">{{$issue->location}}</td>
+              <td class="px-4 py-3 text-sm">{{$issue->description}}</td>
+              <td class="px-4 py-3 text-sm">{{$issue->created_at}}</td>
+              <td class=" text-sm px-2 py-1 font-semibold leading-tight text-green-700  rounded-full dark:bg-green-7 dark:text-green-100 ">
+                <span class="px-4 py-2 font-semibold leading-tight text-green-700 bg-green-300 hover:bg-green-500 rounded-full dark:bg-green-700 dark:text-green-100">
+                
+                
+                
+              <button onclick="fixFault({{$issue->id}});">Fix</button>
+              
+                
+                </span>
+            
+
+
+
+
+
+
+              
+              </td>
+               
+            </tr>
+               @endforeach
+          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                  </div>  
+
+</div>
+
+
+
+
+
+
+
+
+
                             </div>
-                            <div class="card-content">
-                                <table class=" responsive-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Fault Name</th>
-                                            <th>Category</th>
-                                            <th>Location</th>
-                                            <th>User Email</th>
-                                            <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Reported date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                     
-                                    
-                                    
-                                    </tbody>
-                                
-                                </table>
                             </div>
                         </div></div>
                         </div>
@@ -204,10 +250,7 @@
                 </div>
               </td>
               <td class="px-4 py-3 text-sm"></td>
-              <td class="px-4 py-3 text-xs">
-                <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"> fixed </span>
-              </td>
-              <td class="px-4 py-3 text-sm"></td>
+              
             </tr>
                
           <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
@@ -227,6 +270,8 @@
 
    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
    <script>
+
+
      const setup = () => {
        const getTheme = () => {
          if (window.localStorage.getItem('dark')) {
@@ -247,7 +292,20 @@
            setTheme(this.isDark)
          },
        }
-     }
+	 }
+	 
+	 function fixFault(id){
+
+	fetch('http://localhost:8000/api/fault/{$id}/update', {
+        method: "put",
+        headers: {
+          'Content-type' : 'application/json'
+        },
+        body: 
+
+  })
+			console.log(id)
+	 }
    </script>
 
 

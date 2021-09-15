@@ -6,7 +6,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Http\Request;
 use Illuminate\Queue\InteractsWithQueue;
 use\App\Models\Fault;
+use App\Models\User;
 use App\Events\UserReport;
+use Illuminate\Support\Facades\Notification;
+use App\Notification\FaultReport;
 
 
 class UserReportListener
@@ -29,21 +32,13 @@ class UserReportListener
      * @param  object  $event
      * @return void
      */
-    public function handle(UserReport $event,Request $request)
+    public function handle($event)
     {      
+        $admin = User::whereHas('roles',function ($query){
+            $query->where('id',1);
+        })->get();
+        Notification::send($admin, new FaultReport($event->fault));
                  
         
-
-
-
-    //     public function joinTables() {
-
-    //     $data = Fault::join('faults','faults.user_id','=','users.user_id')
-    //     ->join('faults','faults.role_id','=','roles.role_id')
-    //     ->get(['users.name','faults.fault_name','faults.category','faults.location']);
-
-    //     return view('admin.dashboard',compact('data'));
-    //         }
-    //         return back();
-    // }
+        }
 }

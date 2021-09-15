@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Events\FautEvent;
 use App\Models\Details;
 use App\Models\Fault;
 use App\Models\Role;
@@ -13,50 +14,77 @@ use App\Models\User;
 use Image;
 
 class DashboardController extends Controller
-{
+{   
+// verifying the user and redirecting the user to the specified page according to the role type
     public function index()
     {
         if(Auth::user()->hasRole('student'))
         {
-            return view('student.dashboard');
+            $studentdata = Fault::all()->where('user_id','=',Auth::user()->id);
+            return view('student.dashboard',compact('studentdata'));
         }
         elseif(Auth::user()->hasRole('staff'))
         {
-            return view('staff.staffdashboard');
+             $staffdata = Fault::all()->where('user_id','=',Auth::user()->id);
+             
+            return view('staff.staffdashboard',compact('staffdata'));
         }
         elseif(Auth::user()->hasRole('admin')){
-            return view('admin.dashboard');
+            $issues = Fault::all();
+            return view('admin.dashboard',compact('issues'));
         }
-    }
     
-        public function getData(){
-             $issues = Fault::all();
-            return view('admin.dashboard',compact('issues'));    
+     }
+    //  retrievin the fault by id in the database
+     public function getFaultById($id){
+         $staffdata = Fault::all()->where('id',$id)->first();
+         return view('staff.staffdashboard',compact('fault'));
+        }
+        // deleting the reported fault
+     public function deleteFaultStaff($id)
+     {
+        // calling the delete function where the id matches the id in the database
+           $staffdata = Fault::find($id);
+           $staffdata->delete();    
+        // showing the user that the fault has been deleted successifully
+        return back()->with('Fault_deleted', 'fault has been deleted successifully');
+    }
+      public function deleteFaultStudent($id)
+     {
+        // calling the delete function where the id matches the id in the database
+           $staffdata = Fault::find($id);
+           $staffdata->delete();    
+        // showing the user that the fault has been deleted successifully
+        return back()->with('Fault_deleted', 'fault has been deleted successifully');
+    }
+    //Getting data from database and displaying it on the admins panel   
+//   public function getData(){
+             
+//             return view('admin.issues',compact('issues'));    
+//         }
+        public function fixFault($id)
+        {
+          $fault  = Fault::where("id", $id)->first();
+            if($fault){
+                $fault->status = 'fixed';
+                event(new FaultEvent($fault->user_id));
+                $fault->save();
+                return response()->json([
+                    "message" => "fault fixed"
+                ]);
+                
+            }
+            else{
+             return back()->with('Error','Something went wrong');
+
+            }
         }
 
     public function myprofile(){
       $details = Details::all();
     return view('myprofile',compact('details'));
     }
-
-    
-
-    // public function update_avatar(Request $request)
-    // {
-    //             //  handle image requests
-    //     if ($request->hasFile('avatar'))
-    //     {
-    //         $avatar = $request->file('avatar');
-    //         $filename = time() . '.' .$avatar->getOriginalExtension();
-    //         Image::make($avatar)->resize(300, 300)->save( public_path('/images' . $filename));
-    //
-    //         $user = Auth::user();
-    //         $user->avatar = $filename;
-    //        $user->save();
-    // }
-    // return view('account',  array('user' => Auth::user()));
-    // }
-  
+        // creating a notification notification
         public function notify()
         {
             $notification = auth()->user()->unreadNotifications;
@@ -123,6 +151,10 @@ public function studentNotification()
 public function studentSettings()
 {
     return view('student.settings');
+}
+public function studentProf()
+{
+    return view('student.profile');
 }
 
 

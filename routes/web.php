@@ -72,13 +72,18 @@ Route::get('/staff/faults',[DashboardController::class,'stafffault'])->name('sta
 Route::get('/staff/notification',[DashboardController::class,'staffNotification'])->name('staffnotification.notify');
 Route::get('/staff/profile',[DashboardController::class,'StaffProf'])->name('staffprof.prof');
 Route::get('/staff/settings',[DashboardController::class,'staffSettings'])->name('staff.settings');
-Route::get('/staff/staffdashboard',[DashboardController::class,'JoinTables']);
-Route::get('/staff/staffdashboard',[DashboardController::class,'index'])->name('staffdashboard.index');
-Route::get('/admin/dashboard',[DashboardController::class,'getData']);
+// Route::get('/staff/staffdashboard',[DashboardController::class,'JoinTables']);
+Route::get('/admin/issues',[DashboardController::class,'getData'])->name('admin.issues');
+Route::get('/student/data',[DashboardController::class,'displayStudentData']);
+Route::get('/staff/data',[DashboardController::class,'displayStaffData']);
 Route::get('/admin/settings',[DashboardController::class,'adminSettings'])->name('admin.settings');
 Route::get('/admin/notification',[DashboardController::class,'adminNotification'])->name('admin.notification');
 Route::get('/admin/faults',[DashboardController::class,'adminFault'])->name('admin.faults');
 Route::get('/student/faults',[DashboardController::class,'studentFault'])->name('student.fault');
 Route::get('/student/notification',[DashboardController::class,'studentNotification'])->name('student.notification');
 Route::get('/student/settings',[DashboardController::class,'studentSettings'])->name('student.settings');
+Route::get('/student/profile',[DashboardController::class,'studentProf'])->name('student.prof');
+Route::get('/staff/delete-fault/{id}',[DashboardController::class,'deleteFaultStaff'])->name('staff.deletefault');
+Route::get('/student/delete-fault/{id}',[DashboardController::class,'deleteFaultStudent'])->name('student.deletefault');
+
 require __DIR__.'/auth.php';

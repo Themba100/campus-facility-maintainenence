@@ -1,6 +1,5 @@
-@extends('layout.master')
-@section('content')
-<div>
+
+<div class="mt-6">
         @if(Session::has('The fault has been reported successifully'))
         <div class="alert alert-success">
             {{Session::get('The fault has been reported successifully')}}
@@ -33,7 +32,7 @@
                     <select name="category" id="" class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" required>
                     <option value="electric_fault">Electric Fault</option>
                     <option value="broken_utilities">Broken Utilities</option>
-                    <option value="washrooms">Washrooms</option>
+                    <option value="washrooms">Others</option>
                     </select>
                     <!-- <input name="category" class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="text" required> -->
                 </div>
@@ -57,4 +56,3 @@
     </section>
 </form>
 </div>
-@endsection

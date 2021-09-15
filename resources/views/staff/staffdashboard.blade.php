@@ -198,7 +198,7 @@
                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path></svg>
                  </span>
                  <span class="ml-2 text-sm tracking-wide truncate">Fault Report</span>
-                 <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-blue-500 bg-indigo-50 rounded-full">New</span>
+                 <!-- <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-blue-500 bg-indigo-50 rounded-full">New</span> -->
                </a>
              </li>
          
@@ -208,7 +208,7 @@
                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
                  </span>
                  <span class="ml-2 text-sm tracking-wide truncate">Notifications</span>
-                 <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span>
+                 <!-- <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span> -->
                </a>
              </li>
              <li class="px-5 hidden md:block">
@@ -247,6 +247,7 @@
 
 
          <div>
+         <h2 class="text 3x1 mt-4 mx-8 center text-gray-800 font-bold uppercase">Recent Faults</h2>
   <!-- Client Table -->
   <div class="mt-4 mx-4">
     <div class="w-full overflow-hidden rounded-lg shadow-xs">
@@ -254,36 +255,42 @@
         <table class="w-full">
           <thead>
             <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-              <th class="px-4 py-3">Faults</th>
+              <th class="px-4 py-3">Fault</th>
               <th class="px-4 py-3">Category</th>
-              <th class="px-4 py-3">Status</th>
-              <th class="px-4 py-3">Date</th>
+              <th class="px-4 py-3">Location</th>
+              <th class="px-4 py-3">Description</th>
+              <th class="px-4 py-3">Action</th>
+              
             </tr>
           </thead>
           <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-
+              @foreach ($staffdata as $row )
             
 
             <tr class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
               <td class="px-4 py-3">
                 <div class="flex items-center text-sm">
-                  <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                    <!-- <img class="object-cover w-full h-full rounded-full" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=200&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE3Nzg0fQ" alt="" loading="lazy" /> -->
-                    <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
-                  </div>
+                  
                   <div>
-                    <p class="font-semibold"></p>
+                    <p class="font-semibold">{{$row->fault_name}}</p>
                     <p class="text-xs text-gray-600 dark:text-gray-400"></p>
                   </div>
                 </div>
               </td>
-              <td class="px-4 py-3 text-sm"></td>
-              <td class="px-4 py-3 text-xs">
-                <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"> fixed </span>
+              <td class="px-4 py-3 text-sm">{{$row->category}}</td>
+             
+              <td class="px-4 py-3 text-sm">{{$row->location}}</td>
+
+              <td class="px-4 py-3 text-sm">{{$row->description}}</td>
+            
+             <td class="px-4 flex justify-around py-3 text-xs">
+                <span class="px-4 py-2 font-semibold leading-tight text-green-700 bg-green-300 hover:bg-green-500 rounded-full dark:bg-green-700 dark:text-green-100">edit </span>
+                 <span class="px-3 py-1.5 font-semibold leading-tight text-white bg-red-700 hover:bg-blue-900 rounded-full dark:bg-green-700 dark:text-green-100">
+                 <a href="/staff/delete-fault/{{$row->id}}" class="btn1 btn-danger black">delete </a> 
+                 </span>
               </td>
-              <td class="px-4 py-3 text-sm"></td>
             </tr>
-               
+               @endforeach
           <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                   </div>  
 
